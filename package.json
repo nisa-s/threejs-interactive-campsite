@@ -1,0 +1,12 @@
+{
+  "name": "kamp-alani-projesi",
+  "version": "1.0.0",
+  "description": "Computer Graphics Final Project: Interactive Campsite Scene with Three.js",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "npx serve . -l 8080"
+  },
+  "dependencies": {
+    "three": "^0.160.1"
+  }
+}
