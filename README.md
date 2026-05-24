@@ -1,37 +1,69 @@
-# ⛺ Threejs Interactive Campsite
+# ⛺ Three.js Interactive Campsite
 
-An immersive, interactive 3D nighttime camping environment developed using **Three.js** and **WebGL**. This project demonstrates core computer graphics principles through a stylized low-poly aesthetic.
+An immersive, interactive 3D nighttime camping environment built with Three.js and WebGL. Demonstrates core computer graphics principles through a stylized low-poly aesthetic.
 
-## 🚀 Live Demo
-(https://nisa-s.github.io/threejs-interactive-campsite/)
+🔗 **[Live Demo](https://nisa-s.github.io/threejs-interactive-campsite/)**
 
-## ✨ Key Features
+---
 
-- **Procedural Generation:** Hundreds of trees, rocks, and bushes are generated dynamically with randomized scales and rotations.
-- **Vertex Manipulation:** The terrain is not flat; I manually modified the `BufferAttribute` of the plane geometry to create a curved-earth effect.
-- **Dynamic Lighting & Shadows:** - A moving **Moon** (DirectionalLight) that orbits the scene using trigonometry.
-  - A flickering **Campfire** (PointLight) with real-time intensity jittering.
-  - **PCFSoftShadowMap** for high-quality, smooth shadows.
-- **Interactive Raycasting:** Click on the campfire to "add wood" and watch the flames and light intensity grow dynamically.
-- **First-Person Navigation:** Explore the campsite using arrow keys with smooth damping (OrbitControls integration).
-- **Atmospheric Effects:** Layered ground mist, a rotating star field (3000+ particles), and exponential fog.
+## ✨ Features
 
-## 🛠️ Technical Concepts Implemented
+### Procedural Generation
+Hundreds of trees, rocks, and bushes generated dynamically with randomized scales and rotations — no two scenes look identical.
 
-- **Vertex Shaders Logic:** Manual manipulation of geometry vertices for terrain shaping.
-- **Vector Math:** Used for movement calculations and orbital mechanics (Sine/Cosine).
-- **Material Properties:** Use of MeshStandardMaterial for PBR (Physically Based Rendering) effects.
-- **Performance Optimization:** Geometry and material reuse to maintain high FPS with 500+ objects.
+### Vertex Manipulation
+Custom curved-earth terrain effect achieved by directly modifying `BufferAttribute` geometry vertices.
 
-## 📖 How to Run
+### Dynamic Lighting & Shadows
+- **Moon** — a `DirectionalLight` that orbits the scene using sine/cosine calculations
+- **Campfire** — a `PointLight` with real-time intensity jitter for a flickering flame effect
+- **PCFSoftShadowMap** — high-quality, smooth shadows across the entire scene
 
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/Threejs-Interactive-Campsite.git](https://github.com/YOUR_USERNAME/Threejs-Interactive-Campsite.git)
-Open index.html using a local server (e.g., Live Server extension in VS Code).
+### Interactive Raycasting
+Click on the campfire to add wood — flame height and light intensity grow dynamically with each click.
 
-📜 Academic Purpose
-This project was developed as a term project for the Computer Graphics course.
+### First-Person Navigation
+Explore the campsite with arrow keys and smooth damping via `OrbitControls`.
 
+### Atmospheric Effects
+- Layered ground mist
+- Rotating star field (3000+ particles)
+- Exponential fog for realistic depth
 
-Developed by: Nisanur Şen
+---
+
+## 🛠️ Technical Highlights
+
+| Concept | Implementation |
+|---|---|
+| Vertex Shader Logic | Manual geometry vertex manipulation for terrain shaping |
+| Vector Math | Sine/cosine orbital mechanics and movement calculations |
+| PBR Materials | `MeshStandardMaterial` for physically based rendering |
+| Performance | Strict geometry & material reuse — 500+ objects at stable FPS |
+
+---
+
+## 🚀 Getting Started
+
+### Option 1 — Live Server
+
+```bash
+git clone https://github.com/nisa-s/threejs-interactive-campsite.git
+```
+
+Open `index.html` with a local development server (e.g. the **Live Server** extension in VS Code).
+
+### Option 2 — Node.js
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 📜 Academic Context
+
+Developed as a term project for the **Computer Graphics** course.
+
+**Developer:** Nisanur Şen
